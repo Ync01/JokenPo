@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="JoKenPo"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp" />
+
+    <!-- Texto escolha do computador -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Escolha do App"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        android:layout_marginTop="15dp" />
+
+    <!-- Imagem do computador -->
+    <ImageView
+        android:id="@+id/imageComputador"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Escolha do computador"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/padrao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_marginTop="20dp" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageComputador"
+        android:layout_marginTop="15dp" />
+
+    <!-- Instrução -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma das opções abaixo"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textResultado"
+        android:layout_marginTop="20dp" />
+
+    <!-- Papel -->
+    <ImageView
+        android:id="@+id/imagePapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Papel"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/papel"
+        app:layout_constraintEnd_toStartOf="@id/imagePedra"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        android:layout_marginTop="25dp" />
+
+    <!-- Pedra -->
+    <ImageView
+        android:id="@+id/imagePedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Pedra"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/pedra"
+        app:layout_constraintEnd_toStartOf="@id/imageTesoura"
+        app:layout_constraintStart_toEndOf="@id/imagePapel"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        android:layout_marginTop="25dp" />
+
+    <!-- Tesoura -->
+    <ImageView
+        android:id="@+id/imageTesoura"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="Tesoura"
+        android:scaleType="fitCenter"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imagePedra"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        android:layout_marginTop="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
